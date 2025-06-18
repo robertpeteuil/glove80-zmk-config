@@ -1,6 +1,13 @@
 name: Build
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  pull_request:
+    branches:
+      - 'main'
+  release:
+    types: [released]
+  workflow_dispatch:
+
 
 jobs:
   build:
